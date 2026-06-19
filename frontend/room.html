@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A private Watch Party room with synchronized video playback and live chat.">
+    <meta property="og:title" content="Watch Party Room">
+    <meta property="og:description" content="Join a private room for synchronized video playback and live chat.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="og-image.svg">
+    <title>Watch Party Room | Synchronized video and chat</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="room-shell">
+        <header class="room-header">
+            <a class="brand" href="index.html" aria-label="Watch Party home">
+                <span class="brand-mark" aria-hidden="true">WP</span>
+                <span>Watch Party</span>
+            </a>
+            <div class="room-meta">
+                <div class="room-code">
+                    <span>Room code</span>
+                    <strong id="roomCode"></strong>
+                </div>
+                <div class="room-actions">
+                    <button id="themeToggleBtn" class="btn btn-secondary btn-small" type="button">
+                        <span class="btn-label">Light mode</span>
+                        <span class="btn-loader" aria-hidden="true"></span>
+                    </button>
+                    <button id="copyRoomBtn" class="btn btn-secondary btn-small" type="button">
+                        <span class="btn-label">Copy code</span>
+                        <span class="btn-loader" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="room-grid">
+            <section class="video-panel" aria-labelledby="room-title">
+                <div class="panel-header">
+                    <div>
+                        <p class="eyebrow">Shared playback</p>
+                        <h1 id="room-title">Watch together</h1>
+                    </div>
+                    <span class="status-pill is-connecting" id="status">Connecting</span>
+                </div>
+
+                <video id="video" controls preload="metadata">
+                    <source src="https://www.youtube.com/watch?v=5Yb1teGiaxI&list=RDqPMypN6lQU0&index=5" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p class="video-note">Play, pause, and seek events are shared with everyone in this room.</p>
+                <div class="presence-panel" aria-label="Room members">
+                    <div class="presence-header">
+                        <span class="presence-title">Active users</span>
+                        <span class="presence-count" id="memberCount">0 people</span>
+                    </div>
+                    <ul class="members-list" id="membersList"></ul>
+                    <div class="rename-row">
+                        <span>You are <strong id="currentName"></strong></span>
+                        <button id="renameButton" class="text-button" type="button">rename</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chat-panel" aria-labelledby="chat-title">
+                <div class="panel-header">
+                    <div>
+                        <p class="eyebrow">Room chat</p>
+                        <h2 id="chat-title">Messages</h2>
+                    </div>
+                </div>
+                <div class="chat-window messages" id="messages" aria-live="polite"></div>
+                <form class="input-group" id="chatForm">
+                    <label class="sr-only" for="messageInput">Message</label>
+                    <input id="messageInput" type="text" placeholder="Type a message" autocomplete="off">
+                    <button id="sendButton" class="btn btn-primary" type="submit">
+                        <span class="btn-label">Send</span>
+                        <span class="btn-loader" aria-hidden="true"></span>
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="presence.js"></script>
+    <script src="room-utils.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

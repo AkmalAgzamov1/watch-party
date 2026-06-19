@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a private browser watch room, share one room code, and keep video playback synchronized with live chat.">
+    <meta property="og:title" content="Watch Party">
+    <meta property="og:description" content="Private synchronized video rooms with live chat and one-code access.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="og-image.svg">
+    <title>Watch Party | Private synchronized video rooms</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html" aria-label="Watch Party home">
+                <span class="brand-mark" aria-hidden="true">WP</span>
+                <span>Watch Party</span>
+            </a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#start">Start</a>
+            </nav>
+            <button id="themeToggleBtn" class="btn btn-secondary btn-small" type="button">
+                <span class="btn-label">Light mode</span>
+                <span class="btn-loader" aria-hidden="true"></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <p class="eyebrow">Private browser rooms for shared video</p>
+                    <h1 id="hero-title">Keep every viewer on the same frame.</h1>
+                    <p class="hero-subtitle">Create a room, share the code, and watch a video together with synchronized play, pause, seek, and live chat.</p>
+
+                    <div class="hero-actions" id="start">
+                        <button id="createRoomBtn" class="btn btn-primary btn-large" type="button">
+                            <span class="btn-label">Create room</span>
+                            <span class="btn-loader" aria-hidden="true"></span>
+                        </button>
+                        <div class="join-inline">
+                            <label class="sr-only" for="roomInput">Room code</label>
+                            <input id="roomInput" type="text" placeholder="Enter room code" class="input-large" autocomplete="off">
+                            <button id="joinRoomBtn" class="btn btn-secondary btn-large" type="button">
+                                <span class="btn-label">Join</span>
+                                <span class="btn-loader" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="hero-note">No account required. Rooms are opened from a single shareable code.</p>
+                </div>
+
+                <div class="product-preview" aria-label="Watch Party room preview">
+                    <div class="preview-topbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="preview-video">
+                        <div class="preview-play" aria-hidden="true"></div>
+                        <div class="preview-timeline">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="preview-side">
+                        <div class="preview-message wide"></div>
+                        <div class="preview-message"></div>
+                        <div class="preview-message muted"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="metric-strip" aria-label="Product highlights">
+                <div class="metric-item">
+                    <strong>One code</strong>
+                    <span>Simple room access</span>
+                </div>
+                <div class="metric-item">
+                    <strong>Live sync</strong>
+                    <span>Play, pause, and seek</span>
+                </div>
+                <div class="metric-item">
+                    <strong>Built-in chat</strong>
+                    <span>Room conversation</span>
+                </div>
+            </section>
+
+            <section id="features" class="section-block">
+                <div class="section-heading">
+                    <p class="eyebrow">What is included</p>
+                    <h2>Everything needed for a small private watch room.</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>Synchronized controls</h3>
+                        <p>Playback events are sent to the room so viewers stay aligned when the host plays, pauses, or seeks.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Room chat</h3>
+                        <p>Messages live beside the video, keeping reactions close without covering the viewing area.</p>
+                    </article>
+                    <article class="feature-card">
+                        <h3>Browser first</h3>
+                        <p>The experience works from a standard browser tab with no account flow or installation step.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="how-it-works" class="section-block process-section">
+                <div class="section-heading">
+                    <p class="eyebrow">Room flow</p>
+                    <h2>Start watching in three steps.</h2>
+                </div>
+                <div class="steps">
+                    <article class="step">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h3>Create a room</h3>
+                            <p>Generate a private room URL and code from the start panel.</p>
+                        </div>
+                    </article>
+                    <article class="step">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h3>Share the code</h3>
+                            <p>Send the code to anyone joining from another browser.</p>
+                        </div>
+                    </article>
+                    <article class="step">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h3>Watch in sync</h3>
+                            <p>Use the shared room to keep playback and conversation together.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div>
+                <a class="brand footer-brand" href="index.html" aria-label="Watch Party home">
+                    <span class="brand-mark" aria-hidden="true">WP</span>
+                    <span>Watch Party</span>
+                </a>
+                <p>Private synchronized video rooms for small groups.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#start">Start</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="mailto:hello@watchparty.local">Contact</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="theme.js"></script>
+    <script>
+        const createRoomBtn = document.getElementById("createRoomBtn");
+        const joinRoomBtn = document.getElementById("joinRoomBtn");
+        const roomInput = document.getElementById("roomInput");
+
+        function randomRoomId() {
+            return "room-" + Math.random().toString(36).slice(2, 10);
+        }
+
+        function navigateToRoom(room, button) {
+            if (!room || button?.classList.contains("is-loading")) return;
+
+            button?.classList.add("is-loading");
+            button?.setAttribute("aria-busy", "true");
+
+            window.setTimeout(() => {
+                window.location.href = `room.html?room=${encodeURIComponent(room)}`;
+            }, 180);
+        }
+
+        createRoomBtn.addEventListener("click", () => {
+            navigateToRoom(randomRoomId(), createRoomBtn);
+        });
+
+        joinRoomBtn.addEventListener("click", () => {
+            const room = roomInput.value.trim();
+            navigateToRoom(room || randomRoomId(), joinRoomBtn);
+        });
+
+        roomInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                joinRoomBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>

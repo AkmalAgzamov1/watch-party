@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Watch Party">
+  <rect width="64" height="64" rx="12" fill="#214e44"/>
+  <path d="M18 22h28a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V26a4 4 0 0 1 4-4Z" fill="#ffffff"/>
+  <path d="M28 29v12l11-6-11-6Z" fill="#c67b45"/>
+  <path d="M20 16h24" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>
